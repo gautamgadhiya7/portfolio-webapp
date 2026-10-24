@@ -13,18 +13,46 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gautam Gadhiya | Full Stack Software Developer",
+  title: "Gautam Gadhiya | Software Engineer",
   description:
-    "Full Stack Software Developer passionate about building scalable web applications with React, Next.js, TypeScript, and Node.js. Explore my projects and experience.",
+    "Full Stack Software Developer crafting responsive web applications with React, Next.js, TypeScript, Node.js, and MySQL.",
+  keywords: [
+    "Gautam Gadhiya",
+    "Full Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript",
+    "Node.js",
+    "MySQL",
+    "Portfolio",
+    "Software Engineer",
+  ],
+  authors: [{ name: "Gautam Gadhiya" }],
+  creator: "Gautam Gadhiya",
+  openGraph: {
+    title: "Gautam Gadhiya | Software Engineer",
+    description:
+      "Full Stack Software Developer building responsive web applications with React, Next.js, TypeScript, and Node.js.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gautam Gadhiya | Full Stack Software Developer",
+    description:
+      "Full Stack Software Developer building responsive web applications.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }
